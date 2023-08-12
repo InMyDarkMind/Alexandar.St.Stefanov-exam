@@ -32,3 +32,8 @@ jobs:
       run: npm run test:unit
     - name: Display user
       run: echo "Alexandar.St.Stefanov"
+    - name: Deploy To production
+      uses: johnbeyond/render-deploy-action@v0.0.8
+      with:
+        service-id: ${{ secrets.RENDER_TOKEN }}
+        api-key: ${{ secrets.RENDER_API_KEY }}
