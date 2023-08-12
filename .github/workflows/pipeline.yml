@@ -26,5 +26,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - name: Install NPM
     - run: npm install
+    - name: Running Test
     - run: npm test:unit
+    - name: Display user
+    - run: echo "Alexandar.St.Stefanov"
